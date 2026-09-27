@@ -1,8 +1,255 @@
-css
 /* ============================================
    COMPONENTS — кнопки, бейджи, карточки, модалки
    ============================================ */
 
-/* Кнопки — будут заполнены следующим шагом */
-/* Бейджи — будут заполнены следующим шагом */
-/* Карточки — будут заполнены следующим шагом */
+/* ---------- КНОПКИ ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  height: 56px;
+  padding: 0 var(--space-2xl);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  border: 1.5px solid transparent;
+}
+
+.btn--primary {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+.btn--primary:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-1px);
+}
+
+.btn--secondary {
+  background: transparent;
+  color: var(--color-text);
+  border-color: var(--color-text);
+}
+
+.btn--secondary:hover {
+  background: var(--color-text);
+  color: var(--color-text-inverse);
+}
+
+.btn--ghost {
+  background: var(--color-bg-card);
+  color: var(--color-text);
+}
+
+.btn--ghost:hover {
+  background: var(--color-bg-hover);
+}
+
+.btn--sm {
+  height: 44px;
+  padding: 0 var(--space-lg);
+  font-size: var(--fs-small);
+}
+
+.btn--full {
+  width: 100%;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ---------- БЕЙДЖИ ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 var(--space-md);
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-tiny);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+}
+
+.badge--hit {
+  background: var(--color-badge-hit-bg);
+  color: var(--color-badge-hit-text);
+}
+
+.badge--new {
+  background: var(--color-badge-new-bg);
+  color: var(--color-badge-new-text);
+}
+
+.badge--age {
+  background: var(--color-badge-age-bg);
+  color: var(--color-badge-age-text);
+}
+
+.badge-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+/* ---------- КАРТОЧКА ТОВАРА ---------- */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.product-card__image {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: var(--color-bg-card);
+  overflow: hidden;
+}
+
+.product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.product-card:hover .product-card__image img {
+  transform: scale(1.05);
+}
+
+.product-card__favorite {
+  position: absolute;
+  top: var(--space-md);
+  right: var(--space-md);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text);
+  transition: all var(--transition-fast);
+}
+
+.product-card__favorite:hover,
+.product-card__favorite.is-active {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.product-card__favorite svg {
+  width: 20px;
+  height: 20px;
+}
+
+.product-card__badges {
+  position: absolute;
+  left: var(--space-md);
+  bottom: var(--space-md);
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.product-card__body {
+  padding: var(--space-md) var(--space-md) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.product-card__price {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+}
+
+.product-card__title {
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ---------- КАТЕГОРИИ (плитки) ---------- */
+.category-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--transition-base);
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+}
+
+.category-card__title {
+  font-size: var(--fs-body-lg);
+  font-weight: var(--fw-medium);
+  color: var(--color-text);
+  max-width: 60%;
+}
+
+.category-card__image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  height: 70%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.category-card__image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ---------- СЕТКА ---------- */
+.grid {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.grid--products {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--categories {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .grid--products { grid-template-columns: repeat(3, 1fr); }
+  .grid--categories { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid--products { grid-template-columns: repeat(2, 1fr); }
+  .grid--categories { grid-template-columns: repeat(2, 1fr); }
+}

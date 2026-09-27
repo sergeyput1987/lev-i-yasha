@@ -1,4 +1,3 @@
-html
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -14,11 +13,193 @@ html
   <link rel="stylesheet" href="css/components.css">
 </head>
 <body>
-  <!-- Header будет здесь -->
-  <!-- Main будет здесь -->
-  <!-- Footer будет здесь -->
 
-  <h1>Лев и Яша</h1>
-  <p>Каркас готов. Начинаем собирать страницы.</p>
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container header__inner">
+
+      <!-- Логотип -->
+      <a href="index.html" class="header__brand">
+        <div class="header__logo">
+          <img src="assets/icons/logo.png" alt="Лев и Яша">
+        </div>
+        <div class="header__brand-text">
+          <span class="header__brand-title">Лев и Яша</span>
+          <span class="header__brand-subtitle">Сервис проката детских игрушек и товаров</span>
+        </div>
+      </a>
+
+      <!-- Каталог -->
+      <a href="catalog.html" class="header__catalog">
+        <span class="header__catalog-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+        Каталог
+      </a>
+
+      <!-- Поиск -->
+      <div class="header__search">
+        <input type="search" class="header__search-input" placeholder="Например, велосипед">
+        <svg class="header__search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"/>
+          <path d="m20 20-3.5-3.5"/>
+        </svg>
+      </div>
+
+      <!-- Иконки справа -->
+      <div class="header__actions">
+        <a href="#" class="header__action" aria-label="Профиль">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+          </svg>
+        </a>
+        <a href="favorites.html" class="header__action" aria-label="Избранное">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1L12 21l7.7-7.6 1.1-1a5.5 5.5 0 0 0 0-7.8z"/>
+          </svg>
+        </a>
+        <a href="cart.html" class="header__action" aria-label="Корзина">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <path d="M3 6h18"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="header__badge">2</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================= MAIN ================= -->
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero__content">
+          <h1 class="hero__title">Прокат детских товаров</h1>
+          <p class="hero__subtitle">Сдавайте и приобретайте детские товары выгодно</p>
+          <div class="hero__actions">
+            <a href="catalog.html" class="btn btn--primary">Выбрать игрушку</a>
+            <a href="#" class="btn btn--secondary">Сдать в аренду</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- КАТЕГОРИИ -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2 class="section__title">Категории</h2>
+          <a href="catalog.html" class="link-arrow">Все категории</a>
+        </div>
+
+        <div class="grid grid--categories">
+          <a href="catalog.html" class="category-card" style="background: var(--color-cat-toys);">
+            <span class="category-card__title">Игрушки</span>
+          </a>
+          <a href="catalog.html" class="category-card" style="background: var(--color-cat-transport);">
+            <span class="category-card__title">Детский транспорт</span>
+          </a>
+          <a href="catalog.html" class="category-card" style="background: var(--color-cat-sleep);">
+            <span class="category-card__title">Комната сна</span>
+          </a>
+          <a href="catalog.html" class="category-card" style="background: var(--color-cat-consoles);">
+            <span class="category-card__title">Консоли и видеоигры</span>
+          </a>
+          <a href="catalog.html" class="category-card" style="background: var(--color-cat-trainers);">
+            <span class="category-card__title">Тренажеры и игровые комплексы</span>
+          </a>
+          <a href="catalog.html" class="category-card" style="background: var(--color-cat-walks);">
+            <span class="category-card__title">Прогулки и путешествия</span>
+          </a>
+          <a href="catalog.html" class="category-card" style="background: var(--color-cat-holiday);">
+            <span class="category-card__title">Все для праздника</span>
+          </a>
+          <a href="catalog.html" class="category-card" style="background: var(--color-cat-photo);">
+            <span class="category-card__title">Аксессуары для фотосессии</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <img src="assets/icons/logo.png" alt="Лев и Яша">
+          </div>
+          <div class="footer__brand-text">
+            Сервис проката детских игрушек и товаров
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Компания</div>
+          <ul class="footer__col-list">
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Trade-In</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Помощь</div>
+          <ul class="footer__col-list">
+            <li><a href="delivery.html">Доставка и оплата</a></li>
+            <li><a href="#">Оферта</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="cleanliness.html">Гарантия чистоты</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Арендаторам</div>
+          <ul class="footer__col-list">
+            <li><a href="how-it-works.html">Как взять в аренду</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Владельцам</div>
+          <ul class="footer__col-list">
+            <li><a href="#">Как сдать в аренду</a></li>
+            <li><a href="#">Публикация объявлений</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2024 Прокат игрушек УНП 790318893</span>
+        <a href="privacy.html">Политика конфиденциальности</a>
+        <div class="footer__socials">
+          <a href="#" class="footer__social" aria-label="Telegram">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22 2 2 10l6 2 2 8 4-5 6 5 2-18z"/>
+            </svg>
+          </a>
+          <a href="#" class="footer__social" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 3.5A11 11 0 0 0 3 17l-1 5 5-1a11 11 0 0 0 13-17.5zM12 20a8 8 0 0 1-4-1l-3 .5.5-3a8 8 0 1 1 6.5 3.5z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
