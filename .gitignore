@@ -1,0 +1,21 @@
+### Файл 2: `.gitignore`
+
+```gitignore
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Логи
+*.log
+npm-debug.log*
+
+# Зависимости (на будущее)
+node_modules/
+
+# Vercel
+.vercel

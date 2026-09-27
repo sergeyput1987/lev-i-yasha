@@ -1,0 +1,146 @@
+css
+/* ============================================
+   ДИЗАЙН-ТОКЕНЫ
+   Все значения меняются здесь — в одном месте.
+   ============================================ */
+
+:root {
+  /* ---------- Цвета ---------- */
+  /* Основной текст */
+  --color-text: #2B1B14;
+  --color-text-secondary: #6B5B52;
+  --color-text-muted: #9B8B82;
+  --color-text-inverse: #FFFFFF;
+
+  /* Акцент (кнопки, ссылки) */
+  --color-accent: #A67B5B;
+  --color-accent-hover: #8F6849;
+  --color-accent-light: #C9A888;
+  --color-accent-bg: #F5EDE4;
+
+  /* Фоны */
+  --color-bg: #FFFFFF;
+  --color-bg-cream: #FAF7F2;
+  --color-bg-card: #F7F4EF;
+  --color-bg-hover: #F0EBE3;
+  --color-bg-footer: #F5F5F5;
+
+  /* Границы */
+  --color-border: #E5DFD7;
+  --color-border-light: #F0EBE3;
+
+  /* Бейджи */
+  --color-badge-hit-bg: #7CB342;
+  --color-badge-hit-text: #FFFFFF;
+  --color-badge-new-bg: #F0D9A8;
+  --color-badge-new-text: #5C4A2E;
+  --color-badge-age-bg: #D6E4F0;
+  --color-badge-age-text: #2B4A6B;
+
+  /* Категории (фоны плиток) */
+  --color-cat-toys: #FAF0E0;
+  --color-cat-transport: #F8E4EC;
+  --color-cat-sleep: #E5F0E5;
+  --color-cat-consoles: #DCE8F5;
+  --color-cat-trainers: #F8E8E5;
+  --color-cat-walks: #EDE5F0;
+  --color-cat-holiday: #E5F0EE;
+  --color-cat-photo: #F0EBE0;
+
+  /* Статусы */
+  --color-success: #7CB342;
+  --color-warning: #F5A623;
+  --color-error: #E53935;
+  --color-info: #2196F3;
+
+  /* ---------- Типографика ---------- */
+  /* Шрифты — заменить после уточнения из Figma */
+  --font-main: 'Vela Sans', 'Golos Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: var(--font-main);
+
+  /* Размеры */
+  --fs-h1: 72px;
+  --fs-h2: 48px;
+  --fs-h3: 32px;
+  --fs-h4: 24px;
+  --fs-body-lg: 18px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+  --fs-tiny: 12px;
+
+  /* Веса */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Межстрочный */
+  --lh-tight: 1.1;
+  --lh-heading: 1.2;
+  --lh-body: 1.5;
+  --lh-relaxed: 1.6;
+
+  /* ---------- Отступы ---------- */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+
+  /* ---------- Радиусы ---------- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-pill: 999px;
+
+  /* ---------- Тени ---------- */
+  --shadow-sm: 0 1px 3px rgba(43, 27, 20, 0.06);
+  --shadow-md: 0 4px 12px rgba(43, 27, 20, 0.08);
+  --shadow-lg: 0 8px 24px rgba(43, 27, 20, 0.10);
+  --shadow-modal: 0 20px 60px rgba(43, 27, 20, 0.20);
+
+  /* ---------- Layout ---------- */
+  --container-max: 1440px;
+  --container-padding: 80px;
+  --header-height: 96px;
+  --footer-height: auto;
+
+  /* ---------- Переходы ---------- */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+}
+
+/* ---------- Адаптив (задел на будущее) ---------- */
+@media (max-width: 1440px) {
+  :root {
+    --container-padding: 48px;
+    --fs-h1: 56px;
+    --fs-h2: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --container-padding: 32px;
+    --fs-h1: 44px;
+    --fs-h2: 32px;
+    --fs-h3: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 20px;
+    --fs-h1: 32px;
+    --fs-h2: 26px;
+    --fs-h3: 22px;
+    --fs-h4: 20px;
+    --fs-body-lg: 16px;
+  }
+}
