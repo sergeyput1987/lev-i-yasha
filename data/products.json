@@ -1,0 +1,68 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "UNIX Kids Детская горка + подставка для ног (2 в 1)",
+      "price": 1000,
+      "image": "assets/images/product-1.png",
+      "badges": ["hit", "new"],
+      "age": "2-3"
+    },
+    {
+      "id": 2,
+      "title": "Сухой бассейн Romana Фламинго 150 шариков",
+      "price": 1000,
+      "image": "assets/images/product-2.png",
+      "badges": ["hit", "new"],
+      "age": "0-6"
+    },
+    {
+      "id": 3,
+      "title": "Детский электромобиль Electric Toys BMW X6M LUX полноприводной",
+      "price": 1000,
+      "image": "assets/images/product-3.png",
+      "badges": ["hit", "new"],
+      "age": "3-4"
+    },
+    {
+      "id": 4,
+      "title": "Кукольный домик для Барби AVA с мебелью KidKraft",
+      "price": 1000,
+      "image": "assets/images/product-4.png",
+      "badges": ["hit", "new"],
+      "age": "5-14"
+    },
+    {
+      "id": 5,
+      "title": "Детская кухня ECO TOYS",
+      "price": 1000,
+      "image": "assets/images/product-5.png",
+      "badges": ["hit", "new"],
+      "age": "2-3"
+    },
+    {
+      "id": 6,
+      "title": "Батут Neo-Sport 312cm",
+      "price": 1000,
+      "image": "assets/images/product-6.png",
+      "badges": ["hit", "new"],
+      "age": "5-14"
+    },
+    {
+      "id": 7,
+      "title": "Аэрохоккей DFC",
+      "price": 1000,
+      "image": "assets/images/product-7.png",
+      "badges": ["hit", "new"],
+      "age": "5-14"
+    },
+    {
+      "id": 8,
+      "title": "Детский электромотоцикл Baby Driver Kawasaki",
+      "price": 2000,
+      "image": "assets/images/product-8.png",
+      "badges": ["hit", "new"],
+      "age": "5-14"
+    }
+  ]
+}

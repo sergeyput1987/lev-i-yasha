@@ -253,3 +253,200 @@
   .grid--products { grid-template-columns: repeat(2, 1fr); }
   .grid--categories { grid-template-columns: repeat(2, 1fr); }
 }
+/* ---------- ТАБЫ ВОЗРАСТА ---------- */
+.age-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.age-tab {
+  height: 44px;
+  padding: 0 var(--space-lg);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  border: 1.5px solid var(--color-border);
+  font-size: var(--fs-small);
+  color: var(--color-text);
+  transition: all var(--transition-fast);
+}
+
+.age-tab:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.age-tab.is-active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+/* ---------- ШАГИ «КАК МЫ РАБОТАЕМ» ---------- */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2xl);
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.step__num {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #F5DFC0;
+  color: var(--color-accent-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--fs-body-lg);
+  font-weight: var(--fw-medium);
+}
+
+.step__title {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-semibold);
+}
+
+.step__text {
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* ---------- CTA-БАННЕР ---------- */
+.cta-banner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-2xl);
+  align-items: center;
+  padding: var(--space-3xl);
+  background: #FBF1E5;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+}
+
+.cta-banner__title {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--space-md);
+}
+
+.cta-banner__text {
+  font-size: var(--fs-body);
+  color: var(--color-text-secondary);
+  max-width: 520px;
+  margin-bottom: var(--space-xl);
+  line-height: 1.5;
+}
+
+.cta-banner__image img {
+  max-width: 260px;
+  border-radius: 50%;
+}
+
+/* ---------- ПРЕИМУЩЕСТВА ---------- */
+.benefits {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+  background: var(--color-bg-card);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-3xl);
+}
+
+.benefits__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.benefit {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: var(--space-md);
+}
+
+.benefit__icon {
+  width: 40px;
+  height: 40px;
+  color: var(--color-text);
+}
+
+.benefit__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.benefit__title {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+  margin-bottom: var(--space-xs);
+  line-height: 1.4;
+}
+
+.benefit__text {
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.benefits__image img {
+  border-radius: var(--radius-xl);
+  width: 100%;
+}
+
+/* ---------- ПЛАНЕТА ---------- */
+.planet-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2xl);
+}
+
+.planet-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.planet-card__image {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-bg-card);
+}
+
+.planet-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.planet-card__title {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+  line-height: 1.3;
+}
+
+.planet-card__text {
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* ---------- Адаптив ---------- */
+@media (max-width: 1024px) {
+  .steps { grid-template-columns: 1fr; }
+  .cta-banner { grid-template-columns: 1fr; text-align: center; }
+  .cta-banner__image { display: flex; justify-content: center; }
+  .benefits { grid-template-columns: 1fr; }
+  .planet-grid { grid-template-columns: 1fr; }
+}
